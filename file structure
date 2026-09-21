@@ -1,0 +1,82 @@
+system-travel/
+│
+├── app/
+│   ├── Http/
+│   │   └── Controllers/
+│   │       ├── Auth/
+│   │       │   ├── LoginController.php
+│   │       │   └── RegisterController.php
+│   │       │
+│   │       ├── HomeController.php
+│   │       ├── ProfileController.php
+│   │       ├── DestinationController.php
+│   │       ├── BookingController.php
+│   │       ├── ReviewController.php
+│   │       ├── ItineraryController.php
+│   │       └── Admin/
+│   │           ├── DashboardController.php
+│   │           ├── DestinationController.php
+│   │           └── BookingController.php
+│   │
+│   └── Models/
+│       ├── User.php
+│       ├── Destination.php
+│       ├── Category.php
+│       ├── Booking.php
+│       ├── Review.php
+│       ├── Itinerary.php
+│       └── ItineraryDestination.php
+│
+├── database/
+│   └── migrations/
+│       ├── create_users_table.php
+│       ├── create_categories_table.php
+│       ├── create_destinations_table.php
+│       ├── create_bookings_table.php
+│       ├── create_reviews_table.php
+│       ├── create_itineraries_table.php
+│       └── create_itinerary_destinations_table.php
+│
+├── resources/
+│   └── views/
+│       ├── layouts/
+│       │   └── app.blade.php
+│       │
+│       ├── auth/
+│       │   ├── login.blade.php
+│       │   └── register.blade.php
+│       │
+│       ├── home.blade.php
+│       │
+│       ├── profile/
+│       │   ├── index.blade.php
+│       │   └── bookings.blade.php
+│       │
+│       ├── destinations/
+│       │   ├── index.blade.php
+│       │   └── show.blade.php
+│       │
+│       ├── bookings/
+│       │   ├── create.blade.php
+│       │   ├── show.blade.php
+│       │   └── ticket.blade.php
+│       │
+│       ├── itinerary/
+│       │   ├── index.blade.php
+│       │   └── create.blade.php
+│       │
+│       ├── reviews/
+│       │   └── create.blade.php
+│       │
+│       └── admin/
+│           ├── dashboard.blade.php
+│           ├── destinations/
+│           │   ├── index.blade.php
+│           │   ├── create.blade.php
+│           │   └── edit.blade.php
+│           │
+│           └── bookings/
+│               └── index.blade.php
+│
+└── routes/
+    └── web.php
