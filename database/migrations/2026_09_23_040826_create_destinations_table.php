@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('destinations', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
+            $table->string('name');
+            $table->text('description');
+            $table->decimal('ticket_price', 12, 2)->default(0);
+            $table->string('opening_hours')->nullable();
+            $table->string('location');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
