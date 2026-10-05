@@ -3,88 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>@yield('title', 'System Travel')</title>
-
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-
-<body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-white border-bottom">
-        <div class="container">
-
-            <a class="navbar-brand fw-bold" href="{{ url('/') }}">
+<body class="bg-slate-50 text-slate-800 antialiased">
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+            <a href="{{ url('/') }}" class="text-xl font-black tracking-tight text-slate-900">
                 System Travel
             </a>
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">
-                            Home
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            Destinasi
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            Itinerary
-                        </a>
-                    </li>
-
-                    <li class="nav-item ms-lg-2">
-                        <a class="btn btn-primary" href="#">
-                            Login
-                        </a>
-                    </li>
-
-                </ul>
-
+            <div class="hidden items-center gap-8 md:flex">
+                <a href="{{ url('/') }}" class="text-sm font-medium text-slate-600 transition hover:text-blue-600">Home</a>
+                <a href="#" class="text-sm font-medium text-slate-600 transition hover:text-blue-600">Destinasi</a>
+                <a href="#" class="text-sm font-medium text-slate-600 transition hover:text-blue-600">Itinerary</a>
             </div>
-        </div>
-    </nav>
 
+            <div class="flex items-center gap-3">
+                <a href="#" class="hidden rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-blue-500 hover:text-blue-600 sm:inline-flex">
+                    Login
+                </a>
+                <button type="button" class="inline-flex rounded-full border border-slate-300 p-2 text-slate-700 md:hidden" aria-label="Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Content -->
     <main>
         @yield('content')
     </main>
 
-
-    <!-- Footer -->
-    <footer class="border-top mt-5 py-4">
-        <div class="container text-center text-muted">
-            <p class="mb-0">
-                &copy; {{ date('Y') }} System Travel
-            </p>
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto max-w-7xl px-4 py-8 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
+            &copy; {{ date('Y') }} System Travel. Semua hak dilindungi.
         </div>
     </footer>
-
-
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
-
 </body>
 </html>
