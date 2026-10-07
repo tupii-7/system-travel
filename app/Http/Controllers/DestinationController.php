@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Destination;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class DestinationController extends Controller
 {
-    public function index(Request $request)
+    public function index(Request $request): View
     {
         $search = $request->string('search')->trim()->toString();
         $category = $request->string('category')->trim()->toString();
@@ -34,7 +35,14 @@ class DestinationController extends Controller
             'destinations' => $destinations,
             'categories' => Category::query()->orderBy('name')->get(),
             'search' => $search,
-            'category' => $category,
+            'categoryName' => $category,
         ]);
+    }
+
+    public function show(Destination $destination): View
+    {
+        $destination->load('category');
+
+        return view('destinations.show', compact('destination'));
     }
 }
