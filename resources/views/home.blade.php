@@ -21,10 +21,10 @@
                 </p>
 
                 <div class="mt-8 flex flex-wrap gap-3">
-                    <a href="{{ url('/destinations') }}" class="inline-flex items-center rounded-full bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700">
+                    <a href="{{ route('destinations.index') }}" class="inline-flex items-center rounded-full bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700">
                         Jelajahi Destinasi
                     </a>
-                    <a href="#" class="inline-flex items-center rounded-full border border-slate-300 bg-white px-6 py-3 text-base font-semibold text-slate-700 transition hover:border-slate-400 hover:text-slate-900">
+                    <a href="{{ route('destinations.index') }}" class="inline-flex items-center rounded-full border border-slate-300 bg-white px-6 py-3 text-base font-semibold text-slate-700 transition hover:border-slate-400 hover:text-slate-900">
                         Buat Itinerary
                     </a>
                 </div>
@@ -72,10 +72,10 @@
                                 class="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-700 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100"
                             >
                                 <option value="">Semua kategori</option>
-                                <option value="alam">Wisata Alam</option>
-                                <option value="budaya">Wisata Budaya</option>
-                                <option value="kuliner">Kuliner</option>
-                                <option value="rekreasi">Rekreasi</option>
+                                <option value="Wisata Alam">Wisata Alam</option>
+                                <option value="Kuliner">Kuliner</option>
+                                <option value="Sejarah">Sejarah</option>
+                                <option value="Buatan">Buatan</option>
                             </select>
                         </div>
 
@@ -139,7 +139,7 @@
                 </div>
                 <div class="p-6">
                     <p class="mb-4 text-sm text-slate-500">Mulai dari Rp 450.000</p>
-                    <a href="{{ url('/destinations') }}" class="inline-flex rounded-full border border-blue-600 px-4 py-2 text-sm font-semibold text-blue-600 transition hover:bg-blue-600 hover:text-white">Lihat detail</a>
+                    <a href="{{ route('destinations.index') }}" class="inline-flex rounded-full border border-blue-600 px-4 py-2 text-sm font-semibold text-blue-600 transition hover:bg-blue-600 hover:text-white">Lihat destinasi</a>
                 </div>
             </div>
 
@@ -151,7 +151,7 @@
                 </div>
                 <div class="p-6">
                     <p class="mb-4 text-sm text-slate-500">Mulai dari Rp 600.000</p>
-                    <a href="{{ url('/destinations') }}" class="inline-flex rounded-full border border-blue-600 px-4 py-2 text-sm font-semibold text-blue-600 transition hover:bg-blue-600 hover:text-white">Lihat detail</a>
+                    <a href="{{ route('destinations.index') }}" class="inline-flex rounded-full border border-blue-600 px-4 py-2 text-sm font-semibold text-blue-600 transition hover:bg-blue-600 hover:text-white">Lihat destinasi</a>
                 </div>
             </div>
 
@@ -163,7 +163,7 @@
                 </div>
                 <div class="p-6">
                     <p class="mb-4 text-sm text-slate-500">Mulai dari Rp 350.000</p>
-                    <a href="{{ url('/destinations') }}" class="inline-flex rounded-full border border-blue-600 px-4 py-2 text-sm font-semibold text-blue-600 transition hover:bg-blue-600 hover:text-white">Lihat detail</a>
+                    <a href="{{ route('destinations.index') }}" class="inline-flex rounded-full border border-blue-600 px-4 py-2 text-sm font-semibold text-blue-600 transition hover:bg-blue-600 hover:text-white">Lihat destinasi</a>
                 </div>
             </div>
         </div>
@@ -176,7 +176,7 @@
                     <p class="text-sm font-medium text-blue-100">Mulai perjalananmu sekarang</p>
                     <h3 class="mt-2 text-2xl font-bold sm:text-3xl">Rencanakan liburan impianmu bersama System Travel</h3>
                 </div>
-                <a href="{{ url('/destinations') }}" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-semibold text-blue-700 transition hover:bg-slate-100">
+                <a href="{{ route('destinations.index') }}" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-semibold text-blue-700 transition hover:bg-slate-100">
                     Lihat Destinasi
                 </a>
             </div>

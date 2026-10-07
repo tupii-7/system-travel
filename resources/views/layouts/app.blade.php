@@ -14,20 +14,25 @@
             </a>
 
             <div class="hidden items-center gap-8 md:flex">
-                <a href="{{ url('/') }}" class="text-sm font-medium text-slate-600 transition hover:text-blue-600">Home</a>
-                <a href="#" class="text-sm font-medium text-slate-600 transition hover:text-blue-600">Destinasi</a>
-                <a href="#" class="text-sm font-medium text-slate-600 transition hover:text-blue-600">Itinerary</a>
+                <a href="{{ route('home') }}" class="text-sm font-medium transition {{ request()->routeIs('home') ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600' }}">Home</a>
+                <a href="{{ route('destinations.index') }}" class="text-sm font-medium transition {{ request()->routeIs('destinations.*') ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600' }}">Destinasi</a>
+                <span class="cursor-not-allowed text-sm font-medium text-slate-400" title="Segera hadir">Itinerary</span>
             </div>
 
             <div class="flex items-center gap-3">
-                <a href="#" class="hidden rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-blue-500 hover:text-blue-600 sm:inline-flex">
-                    Login
-                </a>
-                <button type="button" class="inline-flex rounded-full border border-slate-300 p-2 text-slate-700 md:hidden" aria-label="Menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M4 12h16M4 17h16" />
-                    </svg>
-                </button>
+                <span class="hidden rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-400 sm:inline-flex" title="Segera hadir">Login</span>
+                <details class="relative md:hidden">
+                    <summary class="list-none cursor-pointer rounded-full border border-slate-300 p-2 text-slate-700" aria-label="Buka menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M4 12h16M4 17h16" />
+                        </svg>
+                    </summary>
+                    <div class="absolute right-0 top-12 w-44 rounded-2xl border border-slate-200 bg-white p-2 shadow-lg">
+                        <a href="{{ route('home') }}" class="block rounded-xl px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">Home</a>
+                        <a href="{{ route('destinations.index') }}" class="block rounded-xl px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">Destinasi</a>
+                        <span class="block rounded-xl px-3 py-2 text-sm font-medium text-slate-400">Itinerary (segera)</span>
+                    </div>
+                </details>
             </div>
         </nav>
     </header>
